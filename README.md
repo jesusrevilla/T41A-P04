@@ -3,7 +3,7 @@
 # 📘 Propiedades de las Relaciones y Álgebra Relacional en PostgreSQL
 
 ## 🧩 1. Propiedades de las Relaciones
-En PostgreSQL, una relación es una tabla. Las propiedades fundamentales que debe cumplir son:
+En PostgreSQL, una reLas propiedades fundamentales que debe cumplir son:
 
 🔹 Propiedades
 - Nombre único: Cada tabla tiene un nombre distinto.
