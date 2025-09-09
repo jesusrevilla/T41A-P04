@@ -70,3 +70,46 @@ INSERT INTO departamentos (id, nombre) VALUES
 (2, 'Marketing'),
 (3, 'Recursos Humanos');
 ```
+
+🔹 1. Selección (σ)
+Ejercicio: Obtener todos los empleados que ganan más de 2500.
+
+🔹 2. Proyección (π)
+Ejercicio: Mostrar solo los nombres de los departamentos
+
+🔹 3. Producto cartesiano (×)
+Ejercicio: Combinar todos los empleados con todos los departamentos (sin relación).
+
+🔹 4. Join (⨝)
+Ejercicio: Mostrar el nombre del empleado junto con el nombre de su departamento.
+
+🔹 5. Renombramiento (ρ)
+Ejercicio: Renombrar la tabla empleados como e y mostrar sus datos.
+
+🔹 6. Unión (∪)
+Ejercicio: Supón que tienes otra tabla empleados_nuevos. Une ambas tablas.
+
+🔹 7. Intersección (∩)
+Ejercicio: Obtener empleados que están en ambas tablas empleados y empleados_nuevos.
+
+🔹 8. Diferencia (−)
+Ejercicio: Obtener empleados que están en empleados pero no en empleados_nuevos.
+
+🔹 9. Agregación
+Ejercicio: Calcular el salario promedio por departamento.
+
+```sql
+SELECT departamento_id, AVG(salario) AS salario_promedio
+FROM empleados
+GROUP BY departamento_id;
+```
+
+🔹 10. Subconsulta
+Ejercicio: Mostrar empleados que ganan más que el salario promedio.
+
+```sql
+SELECT * FROM empleados
+WHERE salario > (
+    SELECT AVG(salario) FROM empleados
+);
+```
